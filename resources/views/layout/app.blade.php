@@ -7,11 +7,21 @@
         <title>{{config('app.name', 'LSAPP')}}</title>
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
+        <style>
+            body {
+                padding-top: 5rem;
+            }
+            .starter-template {
+                padding: 3rem 1.5rem;
+            }
+        </style>
     </head>
     <body>
         @include('inc.navbar')
-        <div class="container">
-            @yield('content')
-        </div>
+        <main role="main" class="container">
+            <div class="starter-template">
+                @yield('content')
+            </div>
+        </main>
     </body>
 </html>
